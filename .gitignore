@@ -1,0 +1,73 @@
+﻿# Jarvis Mission Control
+### Local-First AI Infrastructure & Automation Engineering
+
+Jarvis is a personal engineering project exploring the integration
+of local AI models, Windows infrastructure automation, event-driven
+architecture, and policy-governed autonomous operations.
+
+## Architecture
+
+The broader local project incorporates:
+
+- Windows 11 and PowerShell automation
+- Ollama-based local AI integration
+- Event-driven task scheduling
+- Policy-based authorization and execution controls
+- Persistent state and recovery mechanisms
+- Desktop dashboard interfaces
+- Automated testing and validation
+
+## Included Engineering Showcase
+
+This repository contains selected components from the larger
+private Jarvis project.
+
+### Policy-Governed Automation
+
+The included Python modules demonstrate:
+
+- Typed action and event contracts
+- Deterministic permission evaluation
+- Approval requirements for restricted operations
+- Fail-closed authorization rules
+- Stopped and observation-only operating modes
+- Event scheduling and deduplication logic
+
+### Automated Tests
+
+The standalone policy-engine tests verify:
+
+1. Unknown actions are denied.
+2. Authorized read operations are permitted.
+3. Restricted restart operations require approval.
+4. Stopped mode prevents restart operations.
+
+## Run the Tests
+
+Requires Python 3.11 or newer.
+
+```powershell
+python -m unittest discover -s tests -p "test_policy_showcase.py" -v
+
+
+### Step 2: Add Git exclusions
+
+```powershell
+@'
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.zip
+*.key
+*.pem
+*.pfx
+*.p12
+diagnostics/
+recovery_snapshots/
+continuity/
